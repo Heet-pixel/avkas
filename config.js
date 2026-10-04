@@ -4,8 +4,8 @@
    ========================================================= */
 (function () {
   // ▼▼▼ Change ONLY this line if the backend address changes
-  //     (while testing on Render use e.g. "https://avkas-api.onrender.com") ▼▼▼
-  var PRODUCTION_API = "https://api.avkasco.com";
+  //     (when avkasco.com goes live you may switch to "https://api.avkasco.com") ▼▼▼
+  var PRODUCTION_API = "https://avkas-backend.onrender.com";
 
   // Used automatically when you open the site on your own computer (backend: npm start in the backend folder)
   var LOCAL_API = "http://localhost:4000";
