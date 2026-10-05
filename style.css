@@ -185,6 +185,7 @@ button { font-family: inherit; }
 .stat:nth-child(odd) { border-right: 1px solid var(--line); }
 .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
 .stat b { display: block; font-family: var(--font-display); font-size: 34px; font-weight: 700; line-height: 1; color: var(--ink); }
+.stat b::after { content: "+"; }
 .stat span { display: block; margin-top: 12px; font-size: 13px; color: var(--muted); }
 @media (min-width: 640px) { .stat { padding: 40px 16px; } .stat b { font-size: 40px; } .stat span { font-size: 14px; } }
 
@@ -231,13 +232,16 @@ button { font-family: inherit; }
 @media (min-width: 1024px) { .team-grid.partners { grid-template-columns: repeat(4, 1fr); } }
 .team-card { display: block; width: 100%; max-width: 290px; margin-inline: auto; transition: transform .35s ease; }
 .team-card:hover { transform: translateY(-6px); }
-.team-card .photo { width: 156px; margin-inline: auto; }
-.team-card .photo img { width: 100%; aspect-ratio: 186 / 155; object-fit: cover; object-position: top; border-radius: 14px 14px 0 0; }
+.team-card .photo { display: flex; justify-content: center; }
+.team-card .photo img { height: 125px; width: auto; max-width: 100%; object-fit: cover; object-position: top; border-radius: 14px 14px 0 0; }
+.team-card.static:hover { transform: none; }
+.team-grid.experts .team-card { max-width: 390px; }
+.name-card.expert b { text-transform: none; }
 .name-card { position: relative; margin-top: -1px; padding: 16px; text-align: center; background: #fff; border-radius: 4px; box-shadow: 0 14px 40px rgba(20,40,60,.10); }
 .name-card b { display: block; font-family: var(--font-display); font-size: 14px; font-weight: 600; text-transform: uppercase; color: var(--ink); }
 .name-card span { display: block; margin-top: 4px; font-size: 12px; color: rgba(0,0,0,.8); }
 .name-card span:empty { display: none; }
-@media (min-width: 640px) { .team-card .photo { width: 186px; } }
+@media (min-width: 640px) { .team-card .photo img { height: 155px; } }
 
 .dome { position: relative; margin: 64px auto 0; height: 120px; width: 320px; overflow: hidden; }
 .dome::before { content: ""; position: absolute; left: 0; right: 0; top: 60px; height: 300px; border-radius: 50%; background: #f1f3f6; }
@@ -444,3 +448,26 @@ form { position: relative; }
 .blog-head h2 { margin-top: 8px; font-size: 30px; }
 @media (min-width: 640px) { .blog-head { flex-direction: row; text-align: left; } .blog-head h2 { font-size: 38px; } }
 .home-blog .card-grid { padding-top: 0; }
+
+/* ---------- About page (matches the reference video) ---------- */
+.about-flow { position: relative; padding-top: 24px; }
+.about-flow > *:not(.swoosh) { position: relative; z-index: 1; }
+.swoosh { position: absolute; left: 0; width: 100%; top: 36%; height: 62%; z-index: 0; pointer-events: none; overflow: visible; display: none; }
+@media (min-width: 768px) { .swoosh { display: block; } }
+.story-grid { display: grid; gap: 28px; align-items: center; max-width: 1190px; margin: 0 auto; padding: 0 20px; }
+.story-photo img { width: 100%; height: auto; aspect-ratio: 682 / 512; object-fit: cover; box-shadow: 0 30px 90px rgba(20,40,60,.20); }
+.story-copy h2 { font-size: clamp(32px, 3.6vw, 62px); line-height: 1.1; }
+.story-copy h3 { margin-top: 28px; font-size: 15px; font-weight: 600; letter-spacing: 0; }
+.story-copy p { margin-top: 14px; font-size: 14px; line-height: 1.7; }
+@media (min-width: 768px) { .story-grid { grid-template-columns: minmax(0, .92fr) minmax(0, 1fr); gap: 56px; } .story-copy p { font-size: 14.5px; } }
+.story-text { margin-top: 56px; display: grid; gap: 22px; }
+.story-text p { font-size: 14px; line-height: 1.7; }
+@media (min-width: 768px) { .story-text { margin-top: 96px; } .story-text p { font-size: 14.5px; } }
+.achieve-head { margin: 56px auto 28px; max-width: 560px; padding: 0 20px; }
+.achieve-head .eyebrow { font-size: 13px; color: var(--ink); margin-bottom: 12px; }
+.achieve-head p:last-child { font-size: 15px; line-height: 1.6; }
+.achieve-body { max-width: 824px; margin: 0 auto; padding: 0 20px; }
+.stories { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.stories img { width: 100%; height: auto; display: block; }
+@media (min-width: 640px) { .stories { grid-template-columns: 1fr 1fr; gap: 2px; } }
+.bio-closing { margin-top: 32px; font-size: 13.5px; line-height: 1.7; }

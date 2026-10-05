@@ -1,0 +1,14 @@
+HOW TO APPLY THIS UPDATE
+1. Copy everything in this folder into your website folder and choose "Replace" for existing files.
+2. DELETE this file from your website folder (it no longer exists): jitendra-mevada.html
+3. Push to GitHub - Render redeploys automatically.
+
+What changed
+- about.html            new About page (matches the reference video)
+- 18 service pages      new text from the Word file (intro, value paragraph, range list)
+- ca-jay-mehta.html     new text from the Word file
+- index.html            same stats numbers, updated team cards
+- every other .html     only the 'Services' drop-down menu changed (Finance Transformation, ERP Implementation & AI Integration)
+- style.css             styles for the new About page + team cards
+- images/               about-team.jpg, story-midnight-mystery.jpg, story-fuel-fraud.jpg (new)
+- sitemap.xml           Jitendra page removed
