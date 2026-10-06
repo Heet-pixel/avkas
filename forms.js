@@ -85,11 +85,11 @@
       show(null);
       api.wakeBackend(true); // make sure it is waking while we send
       slowTimer = setTimeout(function () {
-        show("note", "Connecting to our server – this can take up to a minute if it was idle. Please keep this page open.");
+        show("note", "Connecting to our server. This can take up to a minute if it was idle. Please keep this page open.");
       }, 8000);
 
       var result = await api.postForm(endpoint, fd, function (n, max) {
-        show("note", "Our server is waking up – retrying automatically (attempt " + n + " of " + max + ")…");
+        show("note", "Our server is waking up. Retrying automatically (attempt " + n + " of " + max + ")…");
       });
 
       clearTimeout(slowTimer);
